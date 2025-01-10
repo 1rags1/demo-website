@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional website development services for small businesses, offering free setup and affordable maintenance plans.">
+    <title>My Business - Website Development</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #3a3a3a;
+            color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: #2c2c2c;
+            color: #ffa500;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin: 10px 0 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffa500;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 80px 0 40px;
+        }
+
+        .home {
+            background: #3a3a3a;
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .home h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        .home p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .about {
+            background: #3a3a3a;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            padding: 40px;
+        }
+
+        .about h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .contact {
+            background: #3a3a3a;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .contact form input, .contact form textarea, .contact form button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact form button {
+            background-color: #ffa500;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact form button:hover {
+            background-color: #ff8500;
+        }
+
+        .pricing {
+            background: #3a3a3a;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            text-align: center;
+        }
+
+        .pricing h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .pricing .plans {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .pricing .plan {
+            background: #3a3a3a;
+            border: 1px solid #ffa500;
+            border-radius: 8px;
+            padding: 20px;
+            width: 30%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .pricing .plan h3 {
+            color: #ffa500;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .pricing .plan p {
+            font-size: 1.2em;
+        }
+
+        footer {
+            background: #2c2c2c;
+            color: #ffa500;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .image {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+            .pricing .plans {
+                flex-direction: column;
+            }
+            .pricing .plan {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Your Business</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="container">
+            <h2>Welcome to My Business</h2>
+            <p>[Enter general information about your business here]</p>
+            <p>Additionall information fits here</p>
+            <div class="image">
+                <img src="https://via.placeholder.com/800x400?text=Professional+Websites" alt="Professional Websites" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>[Enter information about yourself or any other business partners here]</p>
+            <div class="image">
+                <img src="https://via.placeholder.com/800x400?text=About+Me" alt="About Me Section" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="pricing">
+    <div class="container">
+        <h2>Pricing</h2>
+        <p>[Enter pricing information here/any products you are looking to sell]</p>
+
+        <div class="plans">
+            <div class="plan">
+                <h3>Basic Plan</h3>
+                <p>$99/month</p>
+                <p>Includes basic maintenance and updates.</p>
+            </div>
+            <div class="plan">
+                <h3>Pro Plan</h3>
+                <p>$199/month</p>
+                <p>Includes advanced features and priority support.</p>
+            </div>
+            <div class="plan">
+                <h3>Premium Plan</h3>
+                <p>$299/month</p>
+                <p>Includes full customization and 24/7 support.</p>
+            </div>
+        </div>
+    </div>
+    <div id="pricingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modal-title"></h3>
+            <p id="modal-details"></p>
+        </div>
+    </div>
+    
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>EMAIL: [Enter contact info here]</p>
+            <p>PHONE: [Enter contact info here]</p>
+            <div class="image">
+                <img src="https://via.placeholder.com/800x400?text=Contact+Us" alt="Contact Us" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Closing Section -->
+    <section class="pricing">
+        <div class="container">
+            <p>[Enter a closing section here]</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 My Business. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
